@@ -1,26 +1,24 @@
-package Operators;
+//Using Third variable
 
-import java.util.Scanner;
+package Exercise_Practice;
 
-public class SwapNumbers
- {
-    public static void main(String[] args) 
-    {
-        Scanner sc = new Scanner(System.in);
-      
-        System.out.println("Please Enter value of a: ");
-        int a = sc.nextInt();
-
-        System.out.println("Please Enter value of b: ");
-        int b = sc.nextInt();
-
-        int c = a;
-        a = b;
-        b = c;
-
-        System.out.println("value of a is: " +a);
-        System.out.println("Value of b :" +b);
+public class SwapNumbers {
+    public static void main(String[] args) {
         
+        int a = 10;
+        int b = 20;
 
+        System.out.println("Before Swapping Numbers:");
+        System.out.println("a = " +a);
+        System.out.println("b = " +b);
+
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After Swapping Numbers:");
+        System.out.println("a = " +a);
+        System.out.println("b = " +b);
     }
+    
 }
