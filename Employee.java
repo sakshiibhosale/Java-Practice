@@ -1,27 +1,32 @@
-//Using Parameterized Constructor
-package ClassObjectConstructor;
+package Inheritance;
 
-public class Employee {
+ public class Employee {
 
-    int id;
-    String name;
-    double salary;
+    int empId ;
+    String name ;
 
-
-    void display(){
-        System.out.println("Employee ID: " +id);
+    void display() {
+        System.out.println("Employee ID: " +empId);
         System.out.println("Employee Name: " +name);
-        System.out.println("Employee Salary: " +salary);
+    }
+}
+
+class Manager extends Employee {
+    int salary;
+
+    void display() {
+    super.display();
+    System.out.println("Manager Salary: " +salary);
     }
 
-    Employee(int id, String name, double salary){ //Parameterized Constructor
-        this.id = id;
-        this.name = name;
-        this.salary = salary;
+    public static void main(String[] args) {
+        Manager m1 = new Manager();
+
+    m1.empId = 102;
+    m1.name = "Sakshi";
+    m1.salary = 50000;
+    
+        m1.display();
     }
     
-    public static void main(String[] args) {
-        Employee e1 = new Employee(101, "Shivaji", 50000.00);
-        e1.display();
-    }
 }
