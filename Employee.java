@@ -1,32 +1,44 @@
-package Inheritance;
+package Encapsulation;
 
- public class Employee {
+public class Employee {
 
-    int empId ;
-    String name ;
+    private  int empId;
+    private String empName;
+    private  int empSalary;
 
-    void display() {
-        System.out.println("Employee ID: " +empId);
-        System.out.println("Employee Name: " +name);
+    public void setEmpId(int empId){
+        this.empId=empId;
+    }   
+    
+    public int getEmpID(){
+       return empId;   
     }
-}
 
-class Manager extends Employee {
-    int salary;
+    public void setEmpName(String empName){
+        this.empName = empName;
+    }
 
-    void display() {
-    super.display();
-    System.out.println("Manager Salary: " +salary);
+    public String getEmpName(){
+        return empName;
+    }
+
+    public void setEmpSalary(int empSalary){
+        this.empSalary = empSalary;
+    }
+
+    public int getEmpSalary(){
+        return empSalary;
     }
 
     public static void main(String[] args) {
-        Manager m1 = new Manager();
+        Employee emp = new Employee();
 
-    m1.empId = 102;
-    m1.name = "Sakshi";
-    m1.salary = 50000;
-    
-        m1.display();
+        emp.setEmpId(101);
+        emp.setEmpName("Shivaji");
+        emp.setEmpSalary(400000);
+
+        System.out.println(emp.getEmpID());
+        System.out.println(emp.getEmpName());
+        System.out.println(emp.getEmpSalary());
     }
-    
 }
